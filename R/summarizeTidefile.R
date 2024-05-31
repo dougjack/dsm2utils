@@ -1,3 +1,9 @@
+#' Provide basic information about the tidefile
+#'
+#' @param tidefile Full path to the tidefile
+#'
+#' @return List containing basic information
+#' @export
 summarizeTidefile <- function(tidefile) {
 
     # Read the start and end dates and times
