@@ -4,6 +4,8 @@
 #'
 #' @return List containing basic information
 #' @export
+#' @examples
+#' out <- summarizeTidefile(system.file("extdata", "hist_v82.h5", package="dsm2utils", mustWork=TRUE))
 summarizeTidefile <- function(tidefile) {
 
     # Read the start and end dates and times
