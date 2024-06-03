@@ -14,7 +14,7 @@ summarizeTidefile <- function(tidefile) {
     startTime <- envVar[envVar$name=="START_TIME", "value"]
     endDate <- envVar[envVar$name=="END_DATE", "value"]
     endTime <- envVar[envVar$name=="END_TIME", "value"]
-    timestep_min <- rhdf5::h5readAttributes(tidefile, "hydro")$'Time interval'
+    timestep_min <- as.numeric(rhdf5::h5readAttributes(tidefile, "hydro")$'Time interval')
 
     startDatetime_PST <- lubridate::dmy_hm(paste0(startDate, startTime), tz="Etc/GMT+8")
     endDatetime_PST <- lubridate::dmy_hm(paste0(endDate, endTime), tz="Etc/GMT+8")
