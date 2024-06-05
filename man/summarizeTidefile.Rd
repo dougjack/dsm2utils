@@ -13,7 +13,8 @@ summarizeTidefile(tidefile)
 List containing basic information
 }
 \description{
-Provide basic information about the tidefile
+Reads the tidefile's metadata and provides basic information including start datetime, end datetime,
+and time step.
 }
 \examples{
 out <- summarizeTidefile(system.file("extdata", "hist_v82.h5", package="dsm2utils", mustWork=TRUE))

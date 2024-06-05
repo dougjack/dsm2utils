@@ -1,6 +1,6 @@
 Package: dsm2utils
 Title: A Collection of Miscellaneous Utility Functions for DSM2 Tidefiles
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: person("Doug", "Jackson", email="doug@QEDAconsulting.com", 
     role=c("aut", "cre"))
 Description: This package includes a variety of functions for working with DSM2
