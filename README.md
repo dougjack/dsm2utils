@@ -7,7 +7,7 @@
 <!-- badges: end -->
 
 The goal of dsm2utils is to provide a variety of utilities for working
-with DSM2 tidefiles. This can range from reading basic metadata (e.g.,
+with DSM2 tidefiles. This ranges from reading basic metadata (e.g.,
 start and end datetimes) to extracting flows for a particular (external)
 channel number.
 
