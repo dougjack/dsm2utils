@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # dsm2utils
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/dougjack/dsm2utils/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dougjack/dsm2utils/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of dsm2utils is to provide a variety of utilities for working with DSM2 tidefiles. This ranges from reading basic metadata (e.g., start and end datetimes) to extracting flows for a particular (external) channel number.

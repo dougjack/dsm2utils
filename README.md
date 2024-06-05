@@ -4,6 +4,8 @@
 # dsm2utils
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/dougjack/dsm2utils/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dougjack/dsm2utils/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of dsm2utils is to provide a variety of utilities for working
