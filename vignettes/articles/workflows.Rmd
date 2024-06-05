@@ -1,0 +1,19 @@
+---
+title: "Workflows"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The dsm2utils package contains a collection of utilities for working with DSM2 tidefiles. This ranges from reading basic metadata (e.g., start and end datetimes) to extracting flows for a particular (external) channel number.
+
+## Read tidefile metadata
+
+```{r setup}
+library(dsm2utils)
+out <- summarizeTidefile(system.file("extdata", "hist_v82.h5", package="dsm2utils", mustWork=TRUE))
+```
