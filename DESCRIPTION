@@ -1,6 +1,6 @@
 Package: dsm2utils
 Title: A Collection of Miscellaneous Utility Functions for DSM2 Tidefiles
-Version: 0.0.0.9001
+Version: 0.0.0.9002
 Authors@R: person("Doug", "Jackson", email="doug@QEDAconsulting.com", 
     role=c("aut", "cre"))
 Description: This package includes a variety of functions for working with DSM2
@@ -12,8 +12,13 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
 Imports: 
+    dplyr,
+    ggplot2,
     lubridate,
-    rhdf5
+    magrittr,
+    rhdf5,
+    tidyr,
+    utils
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

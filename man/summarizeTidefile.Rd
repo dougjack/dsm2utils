@@ -2,7 +2,7 @@
 % Please edit documentation in R/summarizeTidefile.R
 \name{summarizeTidefile}
 \alias{summarizeTidefile}
-\title{Provide basic information about the tidefile}
+\title{Provide basic information about a tidefile}
 \usage{
 summarizeTidefile(tidefile)
 }
@@ -13,7 +13,7 @@ summarizeTidefile(tidefile)
 List containing basic information
 }
 \description{
-Reads the tidefile's metadata and provides basic information including start datetime, end datetime,
+Reads a tidefile's metadata and provides basic information including start datetime, end datetime,
 and time step.
 }
 \examples{
