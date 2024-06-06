@@ -13,14 +13,14 @@ The dsm2utils package contains a collection of utilities for working with DSM2 t
 
 ## Read tidefile metadata
 
-```{r setup}
+```{r summarizeTidefile}
 library(dsm2utils)
 out <- summarizeTidefile(system.file("extdata", "hist_v82.h5", package="dsm2utils", mustWork=TRUE))
 ```
 
 ## Extract flows and stages
 
-```{r setup}
+```{r extractFlows}
 library(dsm2utils)
 extractFlows(c(system.file("extdata", "hist_v82.h5", package="dsm2utils", mustWork=TRUE)), c(7), ".")
 ```
