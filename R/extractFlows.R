@@ -65,11 +65,12 @@ extractFlows <- function(tidefiles, channelNums, outputDir, figWidth=10, figHeig
         write.csv(DSM2flows, file=file.path(outputDir, paste0("DSM2flows_e", channelNum, ".csv")), row.names=F)
         write.csv(DSM2stages, file=file.path(outputDir, paste0("DSM2stages_e", channelNum, ".csv")), row.names=F)
 
-        DSM2flows <- DSM2flows %>% tidyr::pivot_longer(cols=c("downFlow", "upFlow"), names_to="node", values_to="flow")
-
         # Convert datetimes back to POSIXct
         DSM2flows$datetime_PST <- lubridate::ymd_hms(DSM2flows$datetime_PST)
         DSM2stages$datetime_PST <- lubridate::ymd_hms(DSM2stages$datetime_PST)
+
+        DSM2flows <- DSM2flows %>% tidyr::pivot_longer(cols=c("downFlow", "upFlow"), names_to="node", values_to="flow")
+        DSM2stages <- DSM2stages %>% tidyr::pivot_longer(cols=c("downStage", "upStage"), names_to="node", values_to="stage")
 
         p <- ggplot(DSM2flows) + geom_line(aes(x=datetime_PST, y=flow, group=tidefile, color=tidefile)) +
             facet_grid(node~.) +
@@ -77,8 +78,6 @@ extractFlows <- function(tidefiles, channelNums, outputDir, figWidth=10, figHeig
             scale_x_datetime() +
             theme_light()
         ggsave(file.path(outputDir, paste0("DSM2flows_e", channelNum, ".png")), width=figWidth, height=figHeight)
-
-        DSM2stages <- DSM2stages %>% tidyr::pivot_longer(cols=c("downStage", "upStage"), names_to="node", values_to="stage")
 
         p <- ggplot(DSM2stages) + geom_line(aes(x=datetime_PST, y=stage, group=tidefile, color=tidefile)) +
             facet_grid(node~.) +
