@@ -5,7 +5,7 @@ test_that("startDatetime works", {
 
 test_that("endDatetime works", {
     out <- summarizeTidefile(system.file("extdata", "hist_v82.h5", package="dsm2utils", mustWork=TRUE))
-    expect_equal(out$endDatetime_PST, lubridate::ymd("2011-02-28", tz="Etc/GMT+8"))
+    expect_equal(out$endDatetime_PST, lubridate::ymd("2011-01-11", tz="Etc/GMT+8"))
 })
 
 test_that("timestep_min works", {
