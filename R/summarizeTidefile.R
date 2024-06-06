@@ -1,6 +1,6 @@
-#' Provide basic information about the tidefile
+#' Provide basic information about a tidefile
 #'
-#' Reads the tidefile's metadata and provides basic information including start datetime, end datetime,
+#' Reads a tidefile's metadata and provides basic information including start datetime, end datetime,
 #' and time step.
 #'
 #' @param tidefile Full path to the tidefile
