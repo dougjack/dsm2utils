@@ -41,7 +41,12 @@ extractFlows <- function(tidefiles, channelNums, outputDir, figWidth=10, figHeig
             # Read the start and end dates and times from the channel flow attributes
             channelFlowAttrib <- rhdf5::h5readAttributes(tidefile, "/hydro/data/channel flow")
             rhdf5::h5closeAll()
-            timeStep_min <- as.numeric(gsub("min", "", channelFlowAttrib$interval))
+            if(grepl("min", channelFlowAttrib$interval)) {
+                timeStep_min <- as.numeric(gsub("min", "", channelFlowAttrib$interval))
+            } else if(grepl("hour", channelFlowAttrib$interval)) {
+                timeStep_min <- as.numeric(gsub("hour", "", channelFlowAttrib$interval))*60
+            }
+
             startDatetime <- lubridate::ymd_hms(channelFlowAttrib$start_time, tz="Etc/GMT+8")
             timeSteps <- seq(startDatetime, by=paste0(timeStep_min, " min"), length=dim(thisChannelFlows)[3])
 
@@ -85,3 +90,4 @@ extractFlows <- function(tidefiles, channelNums, outputDir, figWidth=10, figHeig
         ggsave(file.path(outputDir, paste0("DSM2stages_e", channelNum, ".png")), width=figWidth, height=figHeight)
     }
 }
+
