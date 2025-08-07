@@ -8,6 +8,9 @@
 [![R-CMD-check](https://github.com/dougjack/dsm2utils/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dougjack/dsm2utils/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
+==================================================================================================================================
+NOTE: THIS REPOSITORY IS NOT INTENDED TO BE USABLE OR FULLY FUNCTIONAL. IT IS MEANT SOLELY AS AN EXPERIMENTAL REPOSITORY FOR TESTING DEVELOPMENT AND DEPLOYMENT OF R PACKAGES.
+==================================================================================================================================
 The goal of dsm2utils is to provide a variety of utilities for working
 with DSM2 tidefiles. This ranges from reading basic metadata (e.g.,
 start and end datetimes) to extracting flows for a particular (external)
