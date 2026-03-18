@@ -10,7 +10,7 @@ Description: This package includes a variety of functions for working with DSM2
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.3
 Imports: 
     dplyr,
     ggplot2,
